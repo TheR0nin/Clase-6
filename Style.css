@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 37%, rgba(143,143,143,1) 100%);
+}
+
+a {
+    color: #fcff37ef;
+    font-weight: 100px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.020);
+    padding: 20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.toggle {
+    display: none;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.navegacion ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion li {
+    flex: 3;
+}
+
+.navegacion .Social {
+    flex: 1;
+}
+
+section,footer {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.020);
+    color: #fcff37ef;
+    padding: 20px;
+    margin: 20px;
+    font-weight: 100px;
+}
+
+input {
+    padding: 10px;
+    border: 0;
+}
+
+.items {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.020);
+    display: flex;
+}
+
+.item {
+    flex: 1 0 25%;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 5px;
+}
+
+/* Media Queries */
+
+@media all and (max-width:1000px) {
+    .navegacion ul {
+        flex-wrap: wrap;
+    }
+
+    .navegacion li {
+        flex: 1 1 50%;
+    }
+
+    .items {
+        flex-wrap: wrap;
+    }
+
+    .item {
+        flex: 1 1 25%;
+        margin: 10px 30px;
+        align-self: stretch;
+    }
+    .signup input {
+        margin: 5px;
+    }
+}
+
+@media all and (max-width:500px) {
+
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper>*{
+        order: 999;
+    }
+
+    .navegacion li {
+        flex-basis: 100%;
+    }
+
+    .toggle {
+        display: block;
+    }
+
+    .navegacion ul {
+        display: none;
+    }
+
+    .navegacion ul.open {
+        display: flex;
+    }
+    
+
+    .navegacion {
+        order: 1;
+    }
+    
+
+    .top {
+        order: 2;
+    }
+
+    .details {
+        order: 3;
+    }
+
+    .items {
+        flex-wrap: wrap;
+    }
+
+    .item {
+        flex: 1 1 100%;
+        align-self: stretch;
+        margin: 10px 30px;
+        max-height: 300px;
+    }
+
+    .signup {
+        display: flex;
+        flex-direction: column;
+        order: 4;
+    }
+
+    .signup input {
+        margin: 5px;
+    }
+}
